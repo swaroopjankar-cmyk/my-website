@@ -1,0 +1,853 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f7f8f6">
+    <meta
+      name="description"
+      content="Pro-Fit Gym — train smarter, feel stronger. Explore memberships,
+      workouts, and expert coaching."
+    >
+    <title>Pro-Fit Gym | Train Smarter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="Pro-Fit%20Gym.css">
+  </head>
+
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Pro-Fit Gym home">
+        <span class="brand-mark">P</span>
+        <span>
+          PRO-FIT
+          <span class="brand-light"> GYM</span>
+        </span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Toggle navigation"
+        aria-expanded="false"
+      >
+        ☰
+      </button>
+
+      <nav class="nav" id="nav">
+        <a href="#programs">Programs</a>
+        <a href="#trainers">Trainers</a>
+        <a href="#membership">Membership</a>
+        <a href="#bmiGeneralTips">Diet</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#contact">Contact</a>
+        <button class="button button-dark nav-login" id="openLogin">
+          Member login ↗
+        </button>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section-wrap" id="home">
+        <div class="hero-copy">
+          <p class="eyebrow">
+            <span class="dot"></span>
+            YOUR SPACE TO GET STRONGER
+          </p>
+          <h1>
+            Small steps.<br>
+            <span>Stronger you.</span>
+          </h1>
+          <p class="hero-text">
+            A smarter, more balanced approach to fitness. Expert coaching,
+            focused training, and a community that keeps you moving forward.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-dark" href="#membership">
+              Explore memberships <span>↗</span>
+            </a>
+            <a class="text-link" href="#programs">
+              Discover programs <span>↓</span>
+            </a>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <strong>12+</strong>
+              <span>Expert coaches</span>
+            </div>
+            <div>
+              <strong>8</strong>
+              <span>Training programs</span>
+            </div>
+            <div>
+              <strong>1,200+</strong>
+              <span>Member milestones</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <img
+            src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1200&q=85"
+            alt="Modern gym with training equipment"
+          >
+          <div class="image-tag">
+            <span class="tag-icon">✳</span>
+            <span>
+              <b>Make time for you.</b>
+              <small>Show up. Keep going.</small>
+            </span>
+          </div>
+          <div class="vertical-note">MOVE WITH PURPOSE · EVERY DAY</div>
+        </div>
+      </section>
+
+      <section class="ticker" aria-label="Gym philosophy">
+        <span>TRAIN WITH PURPOSE</span>
+        <i>✳</i>
+        <span>BUILD GOOD HABITS</span>
+        <i>✳</i>
+        <span>FEEL THE DIFFERENCE</span>
+        <i>✳</i>
+        <span>TRAIN WITH PURPOSE</span>
+      </section>
+
+      <section class="section-wrap section" id="programs">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">FIND YOUR FOCUS</p>
+            <h2>
+              Training that fits <span>your life.</span>
+            </h2>
+          </div>
+          <p class="heading-side">
+            Whether you're just starting or ready to level up, find a program
+            that meets you where you are.
+          </p>
+        </div>
+
+        <div class="program-grid">
+          <article class="program-card">
+            <img
+              src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=800&q=80"
+              alt="Strength training with weights"
+              loading="lazy"
+            >
+            <div class="program-content">
+              <span class="card-number">01 / STRENGTH</span>
+              <h3>Strength & conditioning</h3>
+              <p>
+                Build confidence with structured resistance training and
+                coach-led progressions.
+              </p>
+              <a
+                href="#membership"
+                class="round-link"
+                aria-label="Explore strength and conditioning"
+              >
+                ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="program-card">
+            <img
+              src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=800&q=80"
+              alt="Athlete doing a focused workout"
+              loading="lazy"
+            >
+            <div class="program-content">
+              <span class="card-number">02 / FITNESS</span>
+              <h3>Everyday fitness</h3>
+              <p>
+                Improve stamina, mobility and everyday energy at a pace that
+                works for you.
+              </p>
+              <a
+                href="#membership"
+                class="round-link"
+                aria-label="Explore everyday fitness"
+              >
+                ↗
+              </a>
+            </div>
+          </article>
+
+          <article class="program-card">
+            <img
+              src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=800&q=80"
+              alt="Person practicing a mobility exercise"
+              loading="lazy"
+            >
+            <div class="program-content">
+              <span class="card-number">03 / MOBILITY</span>
+              <h3>Mobility & recovery</h3>
+              <p>
+                Make room for stretching, movement quality and a more
+                balanced routine.
+              </p>
+              <a
+                href="#membership"
+                class="round-link"
+                aria-label="Explore mobility and recovery"
+              >
+                ↗
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="coach-band">
+        <div class="section-wrap coach-inner">
+          <div>
+            <p class="eyebrow">GOOD COACHING CHANGES EVERYTHING</p>
+            <h2>
+              Progress is personal.<br>
+              <span>Your plan should be too.</span>
+            </h2>
+          </div>
+          <a class="button button-light" href="#trainers">
+            Meet your coaches ↗
+          </a>
+        </div>
+      </section>
+
+      <section class="section-wrap section" id="trainers">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">THE PEOPLE IN YOUR CORNER</p>
+            <h2>
+              Meet your <span>coaches.</span>
+            </h2>
+          </div>
+          <p class="heading-side">
+            Friendly experts to help you move well, learn good technique and
+            build consistency.
+          </p>
+        </div>
+
+        <div class="trainer-grid">
+          <article class="trainer-card">
+            <img
+              src="https://images.unsplash.com/photo-1567013127542-490d757e51fc?auto=format&fit=crop&w=700&q=80"
+              alt="Fitness coach portrait"
+              loading="lazy"
+            >
+            <div class="trainer-info">
+              <div>
+                <h3>Alex Morgan</h3>
+                <p>Strength coach</p>
+              </div>
+              <span>01</span>
+            </div>
+          </article>
+
+          <article class="trainer-card">
+            <img
+              src="https://images.unsplash.com/photo-1594381898411-846e7d193883?auto=format&fit=crop&w=700&q=80"
+              alt="Personal training coach"
+              loading="lazy"
+            >
+            <div class="trainer-info">
+              <div>
+                <h3>Maya Lee</h3>
+                <p>Personal trainer</p>
+              </div>
+              <span>02</span>
+            </div>
+          </article>
+
+          <article class="trainer-card">
+            <img
+              src="https://images.unsplash.com/photo-1548690312-e3b507d8c110?auto=format&fit=crop&w=700&q=80"
+              alt="Fitness and mobility coach"
+              loading="lazy"
+            >
+            <div class="trainer-info">
+              <div>
+                <h3>Sam Rivera</h3>
+                <p>Mobility & recovery</p>
+              </div>
+              <span>03</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="membership-section section" id="membership">
+        <div class="section-wrap section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">SIMPLE PLANS. REAL PROGRESS.</p>
+              <h2>
+                Choose your <span>membership.</span>
+              </h2>
+            </div>
+            <p class="heading-side">
+              Start with what works for you. Every plan includes a welcoming
+              space to train.
+            </p>
+          </div>
+
+          <div class="plans-grid">
+            <article class="plan-card">
+              <p class="plan-label">STARTER</p>
+              <h3>Essential</h3>
+              <p class="plan-desc">For building a consistent routine.</p>
+              <div class="price">₹999<span>/ month</span></div>
+              <ul>
+                <li>Gym floor access</li>
+                <li>Basic fitness orientation</li>
+                <li>Locker access during workouts</li>
+              </ul>
+              <button class="button button-outline choose-plan" data-plan="Essential">
+                Choose Essential ↗
+              </button>
+            </article>
+
+            <article class="plan-card plan-featured">
+              <span class="popular">MEMBER FAVOURITE</span>
+              <p class="plan-label">MOST POPULAR</p>
+              <h3>Plus</h3>
+              <p class="plan-desc">For more structure and support.</p>
+              <div class="price">₹1,799<span>/ month</span></div>
+              <ul>
+                <li>Everything in Essential</li>
+                <li>Monthly coach check-in</li>
+                <li>Group training sessions</li>
+              </ul>
+              <button class="button button-dark choose-plan" data-plan="Plus">
+                Choose Plus ↗
+              </button>
+            </article>
+
+            <article class="plan-card">
+              <p class="plan-label">PERSONAL</p>
+              <h3>Performance</h3>
+              <p class="plan-desc">For a more tailored experience.</p>
+              <div class="price">₹2,999<span>/ month</span></div>
+              <ul>
+                <li>Everything in Plus</li>
+                <li>Personal training session</li>
+                <li>Individual progress plan</li>
+              </ul>
+              <button
+                class="button button-outline choose-plan"
+                data-plan="Performance"
+              >
+                Choose Performance ↗
+              </button>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-wrap section tools-section">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">A LITTLE SELF-CHECK</p>
+            <h2>
+              Your BMI <span>calculator.</span>
+            </h2>
+          </div>
+          <p class="heading-side">
+            Quick, general guidance to help you understand where you are and
+            what you can do next.
+          </p>
+        </div>
+
+        <div class="bmi-panel">
+          <form id="bmiForm" class="bmi-form">
+            <label>
+              Height (cm)
+              <input
+                id="height"
+                type="number"
+                min="50"
+                max="250"
+                placeholder="e.g. 170"
+                required
+              >
+            </label>
+            <label>
+              Weight (kg)
+              <input
+                id="weight"
+                type="number"
+                min="10"
+                max="500"
+                step="0.1"
+                placeholder="e.g. 68"
+                required
+              >
+            </label>
+            <button class="button button-dark" type="submit">
+              Calculate BMI ↗
+            </button>
+          </form>
+
+          <div class="bmi-result" id="bmiResult" aria-live="polite">
+            <div class="bmi-result-copy" id="bmiResultCopy">
+              <span class="result-symbol">↗</span>
+              <div>
+                <strong>Your result will appear here</strong>
+                <p>Use this as general information, not a medical assessment.</p>
+              </div>
+            </div>
+
+            <div
+              class="bmi-chart"
+              id="bmiChart"
+              role="img"
+              aria-label="BMI ranges: below 18.5 is below the standard adult
+              range, 18.5 to under 25 is the standard adult range, and 25 or
+              higher is above the standard adult range."
+              hidden
+            >
+              <div class="bmi-scale">
+                <div class="bmi-marker" id="bmiMarker">
+                  <span id="bmiMarkerValue">0</span>
+                </div>
+                <div class="bmi-range-bar" aria-hidden="true">
+                  <span class="bmi-range-low"></span>
+                  <span class="bmi-range-standard"></span>
+                  <span class="bmi-range-high"></span>
+                </div>
+              </div>
+              <div class="bmi-range-labels" aria-hidden="true">
+                <span>Below 18.5</span>
+                <span>Standard 18.5–24.9</span>
+                <span>Above 25</span>
+              </div>
+              <p class="bmi-chart-note">BMI scale: 0–40+</p>
+            </div>
+
+            <div
+              class="bmi-recommendations"
+              id="bmiRecommendations"
+              aria-live="polite"
+              hidden
+            >
+              <h3 id="bmiRecommendationTitle">Diet recommendations</h3>
+              <p class="bmi-recommendation-goal" id="bmiRecommendationGoal"></p>
+              <ul id="bmiRecommendationList"></ul>
+              <p class="bmi-recommendation-note">
+                These are general suggestions, not a personalized nutrition
+                plan. Consider speaking with a registered dietitian or
+                healthcare professional for guidance tailored to you.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <aside
+          class="bmi-general-tips"
+          id="bmiGeneralTips"
+          aria-labelledby="bmiGeneralTipsTitle"
+        >
+          <div class="bmi-general-tips-heading">
+            <p class="eyebrow">EVERYDAY GUIDANCE</p>
+            <h3 id="bmiGeneralTipsTitle">Practical tips for all BMI categories</h3>
+          </div>
+
+          <ul class="bmi-tips-list">
+            <li>Drink plenty of water and stay hydrated.</li>
+            <li>
+              Combine diet with regular physical activity tailored to your
+              fitness level.
+            </li>
+            <li>
+              Track progress and adjust calorie intake or macronutrient
+              balance as needed.
+            </li>
+            <li>
+              Use tools like BMI calculators and meal planners to personalize
+              your diet plan.
+            </li>
+          </ul>
+
+          <div class="bmi-meal-planning" id="mealPlanning">
+            <h4>Sample meal planning</h4>
+            <ul>
+              <li>
+                <strong>Breakfast:</strong> Oatmeal with nuts and fruit or eggs
+                with avocado toast.
+              </li>
+              <li>
+                <strong>Lunch:</strong> Grilled chicken or tofu salad with olive
+                oil dressing.
+              </li>
+              <li>
+                <strong>Dinner:</strong> Baked fish or lean meat with vegetables
+                and quinoa or brown rice.
+              </li>
+              <li>
+                <strong>Snacks:</strong> Yogurt, fruit, nuts, or hummus with
+                vegetables.
+              </li>
+            </ul>
+          </div>
+
+          <p class="bmi-general-note">
+            By aligning your diet with your BMI category, you can support
+            healthy weight gain, maintenance, or loss, improve nutrient intake,
+            and reduce the risk of weight-related health issues.
+          </p>
+        </aside>
+      </section>
+
+      <section class="section-wrap section" id="reviews">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">KIND WORDS, REAL COMMUNITY</p>
+            <h2>
+              Made stronger <span>together.</span>
+            </h2>
+          </div>
+          <div class="review-controls">
+            <button id="prevReview" aria-label="Previous review">←</button>
+            <button id="nextReview" aria-label="Next review">→</button>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="quote-mark">“</div>
+          <blockquote id="reviewQuote">
+            The coaches made starting feel simple. I finally have a routine I
+            enjoy and can stick to.
+          </blockquote>
+          <div class="review-person">
+            <div class="avatar" id="reviewAvatar">M</div>
+            <div>
+              <strong id="reviewName">Maya S.</strong>
+              <p id="reviewMeta">Member · 6 months</p>
+            </div>
+            <span class="stars" id="reviewStars" aria-label="5 out of 5 stars">
+              ★★★★★
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="join-section">
+        <div class="section-wrap">
+          <div class="join-card">
+            <div class="join-copy">
+              <p class="eyebrow">YOUR NEXT CHAPTER STARTS HERE</p>
+              <h2>
+                Ready when <span>you are.</span>
+              </h2>
+              <p>
+                Tell us a little about yourself and our team can help you find
+                your fit.
+              </p>
+            </div>
+            <div class="join-action">
+              <button class="button button-light" id="openRegister">
+                Join Pro-Fit Gym <span aria-hidden="true">↗</span>
+              </button>
+              <small>Choose a plan that works for you.</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-wrap section contact-section" id="contact">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">COME SAY HELLO</p>
+            <h2>
+              Let's get <span>moving.</span>
+            </h2>
+          </div>
+          <p class="heading-side">
+            Questions about memberships or getting started? Send us a message.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-details">
+            <div class="contact-item">
+              <span>01</span>
+              <div>
+                <strong>Visit us</strong>
+                <p>123 Fitness Avenue, Your City, India</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span>02</span>
+              <div>
+                <strong>Call us</strong>
+                <p>+91 98765 43210</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span>03</span>
+              <div>
+                <strong>Opening hours</strong>
+                <p>
+                  Mon–Sat · 6:00 AM–10:00 PM<br>
+                  Sunday · 7:00 AM–1:00 PM
+                </p>
+              </div>
+            </div>
+            <a
+              class="text-link"
+              href="https://maps.google.com/?q=gym"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Open map ↗
+            </a>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <label>
+              Your name
+              <input name="name" placeholder="Full name" required>
+            </label>
+            <label>
+              Email address
+              <input
+                name="email"
+                type="email"
+                placeholder="you@example.com"
+                required
+              >
+            </label>
+            <label>
+              What can we help with?
+              <select name="topic">
+                <option>Membership enquiry</option>
+                <option>Personal training</option>
+                <option>General question</option>
+              </select>
+            </label>
+            <label>
+              Message
+              <textarea
+                name="message"
+                rows="4"
+                placeholder="Tell us what you're looking for..."
+                required
+              ></textarea>
+            </label>
+            <button class="button button-dark" type="submit">
+              Prepare message ↗
+            </button>
+            <p class="form-message" id="contactMessage" aria-live="polite"></p>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="section-wrap footer-main">
+        <a class="brand" href="#home">
+          <span class="brand-mark">P</span>
+          <span>
+            PRO-FIT
+            <span class="brand-light"> GYM</span>
+          </span>
+        </a>
+        <p>Move with purpose. Feel good doing it.</p>
+        <div class="footer-links">
+          <a href="#programs">Programs</a>
+          <a href="#membership">Membership</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+
+      <div class="section-wrap footer-bottom">
+        <span>© <span id="year"></span> Pro-Fit Gym.</span>
+        <a href="#home">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <div
+      class="modal"
+      id="registerModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="registerTitle"
+      hidden
+    >
+      <div class="modal-backdrop" data-close="registerModal"></div>
+      <div class="modal-card registration-card">
+        <button class="modal-close" data-close="registerModal" aria-label="Close">
+          ×
+        </button>
+        <div class="registration-heading">
+          <span class="dash-icon">P</span>
+          <div>
+            <p class="eyebrow">LET'S GET STARTED</p>
+            <h2 id="registerTitle">Join Pro-Fit Gym.</h2>
+          </div>
+        </div>
+        <p class="modal-intro">
+          Create your member profile and choose a starting point.
+        </p>
+        <form class="registration-form" id="registerForm">
+          <label>
+            Full name
+            <input name="name" required placeholder="Your name">
+          </label>
+          <label>
+            Email address
+            <input name="email" type="email" required placeholder="you@example.com">
+          </label>
+          <label>
+            Choose a plan
+            <select name="plan" id="registerPlan">
+              <option>Essential</option>
+              <option>Plus</option>
+              <option>Performance</option>
+            </select>
+          </label>
+          <label>
+            Fitness focus
+            <select name="focus">
+              <option>Build strength</option>
+              <option>Improve fitness</option>
+              <option>Mobility and recovery</option>
+              <option>Build a consistent routine</option>
+            </select>
+          </label>
+          <button class="button button-dark full-width" type="submit">
+            Submit member registration ↗
+          </button>
+          <p class="form-message" id="registerMessage" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="modal"
+      id="loginModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="loginTitle"
+      hidden
+    >
+      <div class="modal-backdrop" data-close="loginModal"></div>
+      <div class="modal-card login-card">
+        <button class="modal-close" data-close="loginModal" aria-label="Close">
+          ×
+        </button>
+        <div class="login-heading">
+          <span class="dash-icon">P</span>
+          <div>
+            <p class="eyebrow">MEMBER AREA PREVIEW</p>
+            <h2 id="loginTitle">Welcome back.</h2>
+          </div>
+        </div>
+        <p class="modal-intro">
+          Sign in to open your member dashboard.
+        </p>
+        <button class="google-login" id="googleLogin" type="button">
+          <svg aria-hidden="true" viewBox="0 0 48 48">
+            <path fill="#EA4335" d="M24 9.5c3.54 0 6.71 1.22 9.21 3.6l6.85-6.85C35.9 2.38 30.47 0 24 0 14.62 0 6.51 5.38 2.56 13.22l7.98 6.19C12.43 13.72 17.74 9.5 24 9.5Z"/>
+            <path fill="#4285F4" d="M46.98 24.55c0-1.57-.15-3.09-.38-4.55H24v9.02h12.89c-.58 2.96-2.26 5.48-4.73 7.18l7.66 5.94c4.47-4.13 7.16-10.21 7.16-17.59Z"/>
+            <path fill="#FBBC05" d="M10.53 28.59A14.4 14.4 0 0 1 9.75 24c0-1.59.27-3.13.76-4.59l-7.98-6.19A23.9 23.9 0 0 0 0 24c0 3.88.93 7.55 2.56 10.78l7.97-6.19Z"/>
+            <path fill="#34A853" d="M24 48c6.48 0 11.93-2.13 15.9-5.86l-7.66-5.94c-2.13 1.43-4.86 2.28-8.24 2.28-6.26 0-11.57-4.22-13.47-9.91l-7.98 6.19C6.51 42.62 14.62 48 24 48Z"/>
+          </svg>
+          Continue with Google
+        </button>
+        <p class="form-message google-login-message" id="googleLoginMessage" aria-live="polite"></p>
+        <div class="login-divider" aria-hidden="true"><span>OR SIGN IN WITH EMAIL</span></div>
+        <form class="login-form" id="loginForm">
+          <label>
+            Your name
+            <input name="name" required placeholder="Enter a display name">
+          </label>
+          <label>
+            Email address
+            <input name="email" type="email" required placeholder="you@example.com">
+          </label>
+          <button class="button button-dark full-width" type="submit">
+            Open dashboard ↗
+          </button>
+          <p class="form-message" id="loginMessage" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+
+    <section class="dashboard section-wrap" id="dashboard" hidden>
+      <div class="dashboard-top">
+        <div>
+          <p class="eyebrow">YOUR MEMBER SPACE</p>
+          <h2>
+            Hey, <span id="dashName">Member</span>.
+          </h2>
+          <p>Welcome to your Pro-Fit dashboard.</p>
+        </div>
+        <button class="button button-outline" id="logoutBtn">
+          Exit dashboard
+        </button>
+      </div>
+
+      <div class="dashboard-grid">
+        <article>
+          <span class="dash-icon">✳</span>
+          <p>YOUR PLAN</p>
+          <h3 id="dashPlan">Not selected</h3>
+          <small>Membership status</small>
+        </article>
+        <article>
+          <span class="dash-icon">↗</span>
+          <p>YOUR NEXT STEP</p>
+          <h3>Show up today</h3>
+          <small>Consistency over perfection.</small>
+        </article>
+        <article>
+          <span class="dash-icon">◎</span>
+          <p>FITNESS FOCUS</p>
+          <h3 id="dashFocus">Build good habits</h3>
+          <small>Change your goals as you grow.</small>
+        </article>
+      </div>
+
+      <form class="member-review-form" id="memberReviewForm">
+        <div class="member-review-heading">
+          <div>
+            <p class="eyebrow">YOUR VOICE MATTERS</p>
+            <h3>Share your Pro-Fit experience.</h3>
+          </div>
+          <span class="dash-icon">★</span>
+        </div>
+        <label>
+          Your review
+          <textarea
+            name="review"
+            rows="4"
+            maxlength="400"
+            required
+            placeholder="What has your training experience been like?"
+          ></textarea>
+        </label>
+        <div class="member-review-submit">
+          <label>
+            Rating
+            <select name="rating" required>
+              <option value="5">5 stars - Excellent</option>
+              <option value="4">4 stars - Great</option>
+              <option value="3">3 stars - Good</option>
+              <option value="2">2 stars - Fair</option>
+              <option value="1">1 star - Needs improvement</option>
+            </select>
+          </label>
+          <button class="button button-dark" type="submit">Post review</button>
+        </div>
+        <p class="form-message" id="memberReviewMessage" aria-live="polite"></p>
+      </form>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+    <script src="Pro-Fit%20Gym.js"></script>
+  </body>
+</html>

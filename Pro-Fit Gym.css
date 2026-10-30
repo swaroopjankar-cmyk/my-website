@@ -1,0 +1,2090 @@
+﻿:root {
+  --ink: #17201b;
+  --muted: #6f7771;
+  --paper: #f7f8f6;
+  --white: #fff;
+  --line: #e2e6e1;
+  --green: #c9f36b;
+  --green-dark: #9ac63b;
+  --radius: 20px;
+  --shadow: 0 18px 50px rgba(24, 34, 27, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: "DM Sans", sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid rgba(154, 198, 59, 0.9);
+  outline-offset: 3px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.section-wrap {
+  width: min(1160px, 100% - 48px);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: 94px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 82px;
+  padding-inline: max(24px, 50% - 580px);
+  background: rgba(247, 248, 246, 0.93);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(226, 230, 225, 0.8);
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font: 800 17px Manrope, sans-serif;
+  letter-spacing: -0.7px;
+}
+
+.brand-mark {
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  border-radius: 11px;
+  background: var(--green);
+  font-size: 21px;
+}
+
+.brand-light {
+  font-weight: 500;
+  color: rgb(122, 130, 123);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.nav > a:not(.brand):hover,
+.footer-links a:hover {
+  color: rgb(98, 138, 30);
+}
+
+.menu-toggle {
+  display: none;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  padding: 8px 12px;
+  font-size: 20px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.menu-toggle:hover {
+  border-color: var(--green-dark);
+  background: #f0f5e9;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  min-height: 48px;
+  padding: 14px 20px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  text-decoration: none;
+  box-shadow: 0 5px 14px rgba(23, 32, 27, 0.1);
+  transition:
+    transform 0.2s,
+    background 0.2s,
+    border-color 0.2s,
+    box-shadow 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 9px 20px rgba(23, 32, 27, 0.16);
+}
+
+.button:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 8px rgba(23, 32, 27, 0.12);
+}
+
+.button-dark {
+  border-color: rgba(201, 243, 107, 0.3);
+  background: linear-gradient(135deg, #17201b, #26352a);
+  color: var(--white);
+}
+
+.button-dark:visited {
+  color: var(--white);
+}
+
+.button-dark:hover {
+  border-color: var(--green-dark);
+  background: linear-gradient(135deg, #26352a, #344b32);
+}
+
+.button-dark span {
+  color: var(--green);
+}
+
+.button-light {
+  border-color: var(--green-dark);
+  background: var(--green);
+  color: var(--ink);
+  box-shadow: 0 5px 14px rgba(154, 198, 59, 0.2);
+}
+
+.button-light:visited {
+  color: var(--ink);
+}
+
+.button-light:hover {
+  background: #d8f88f;
+  box-shadow: 0 9px 20px rgba(154, 198, 59, 0.28);
+}
+
+.button-outline {
+  background: var(--white);
+  border-color: #cdd6c5;
+  color: var(--ink);
+  box-shadow: none;
+}
+
+.button-outline:visited {
+  color: var(--ink);
+}
+
+.button-outline:hover {
+  background: #f0f5e9;
+  border-color: var(--green-dark);
+  box-shadow: 0 6px 14px rgba(23, 32, 27, 0.08);
+}
+
+.nav-login {
+  min-height: 40px;
+  padding: 10px 14px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+  padding-block: 58px 78px;
+}
+
+.eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  margin: 0 0 18px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  color: rgb(104, 115, 106);
+}
+
+.dot {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgb(156, 201, 76);
+}
+
+.hero h1 {
+  margin: 0 0 24px;
+  font: 800 clamp(50px, 6vw, 78px) / 1.06 Manrope, sans-serif;
+  letter-spacing: -4px;
+}
+
+.hero h1 span,
+.section-heading h2 span,
+.coach-inner h2 span,
+.join-copy h2 span,
+.dashboard h2 span {
+  color: rgb(140, 175, 70);
+}
+
+.hero-text {
+  max-width: 480px;
+  color: var(--muted);
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  margin-top: 30px;
+}
+
+.text-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.text-link:hover {
+  color: rgb(114, 153, 45);
+}
+
+.hero-stats {
+  display: flex;
+  gap: 38px;
+  margin-top: 52px;
+  padding-top: 24px;
+  border-top: 1px solid var(--line);
+}
+
+.hero-stats div {
+  display: grid;
+  gap: 3px;
+}
+
+.hero-stats strong {
+  font: 800 23px Manrope, sans-serif;
+}
+
+.hero-stats span {
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 500px;
+}
+
+.hero-visual > img {
+  display: block;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 22px;
+  filter: saturate(0.75);
+}
+
+.image-tag {
+  position: absolute;
+  left: -32px;
+  bottom: 35px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px 18px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: var(--shadow);
+}
+
+.tag-icon {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--green);
+  font-size: 22px;
+}
+
+.image-tag b,
+.image-tag small {
+  display: block;
+}
+
+.image-tag b {
+  font-size: 12px;
+}
+
+.image-tag small {
+  margin-top: 2px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.vertical-note {
+  position: absolute;
+  right: -30px;
+  top: 30px;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  writing-mode: vertical-rl;
+}
+
+.ticker {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 22px;
+  padding: 17px 24px;
+  background: var(--green);
+  font: 800 11px Manrope, sans-serif;
+  letter-spacing: 1.5px;
+}
+
+.ticker i {
+  font-size: 17px;
+  font-style: normal;
+}
+
+.section-heading {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 36px;
+}
+
+.section-heading h2,
+.coach-inner h2,
+.join-copy h2,
+.dashboard h2 {
+  margin: 0;
+  font: 800 clamp(30px, 4vw, 44px) / 1.2 Manrope, sans-serif;
+  letter-spacing: -1.8px;
+}
+
+.heading-side {
+  max-width: 360px;
+  margin: 0 0 4px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+.program-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.program-card {
+  position: relative;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: transform 0.2s;
+}
+
+.program-card:hover,
+.trainer-card:hover {
+  transform: translateY(-4px);
+}
+
+.program-card > img {
+  display: block;
+  width: 100%;
+  height: 225px;
+  object-fit: cover;
+  filter: saturate(0.7);
+}
+
+.program-content {
+  position: relative;
+  padding: 24px 24px 28px;
+}
+
+.card-number {
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: rgb(121, 129, 120);
+}
+
+.program-content h3 {
+  margin: 11px 0 9px;
+  font: 700 19px Manrope, sans-serif;
+  letter-spacing: -0.5px;
+}
+
+.program-content p {
+  max-width: 270px;
+  margin: 0;
+  font-size: 12px;
+  line-height: 1.8;
+  color: var(--muted);
+}
+
+.round-link {
+  position: absolute;
+  right: 22px;
+  top: 23px;
+  display: grid;
+  place-items: center;
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+.coach-band {
+  padding: 65px 0;
+  background: rgb(25, 35, 28);
+  color: white;
+}
+
+.coach-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.coach-inner .eyebrow {
+  color: rgb(196, 206, 197);
+}
+
+.coach-inner h2 span {
+  color: var(--green);
+}
+
+.trainer-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.trainer-card {
+  transition: transform 0.2s;
+}
+
+.trainer-card > img {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  border-radius: 17px;
+  background: rgb(227, 231, 225);
+  filter: saturate(0.75);
+}
+
+.trainer-info {
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+  padding: 17px 4px;
+}
+
+.trainer-info h3 {
+  margin: 0;
+  font: 700 16px Manrope, sans-serif;
+}
+
+.trainer-info p {
+  margin: 4px 0 0;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.trainer-info > span {
+  font-size: 11px;
+  color: rgb(125, 134, 126);
+}
+
+.demo-note {
+  margin-top: 22px;
+  font-size: 11px;
+  color: rgb(123, 132, 124);
+  line-height: 1.7;
+}
+
+.membership-section {
+  background: rgb(238, 241, 236);
+}
+
+.membership-section .section {
+  padding-block: 88px;
+}
+
+.plans-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  align-items: stretch;
+}
+
+.plan-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-height: 410px;
+  padding: 30px;
+  background: white;
+  border: 1px solid rgb(224, 229, 222);
+  border-radius: 18px;
+}
+
+.plan-featured {
+  border: 1.5px solid rgb(156, 201, 76);
+  box-shadow: rgba(43, 64, 31, 0.08) 0 14px 35px;
+}
+
+.popular {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  padding: 5px 8px;
+  background: var(--green);
+  border-radius: 5px;
+  font-size: 8px;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+}
+
+.plan-label {
+  margin: 0 0 10px;
+  font-size: 9px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  color: rgb(118, 128, 117);
+}
+
+.plan-card h3 {
+  margin: 0;
+  font: 800 26px Manrope, sans-serif;
+  letter-spacing: -1px;
+}
+
+.plan-desc {
+  margin: 6px 0 22px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.price {
+  padding-bottom: 23px;
+  border-bottom: 1px solid var(--line);
+  font: 800 30px Manrope, sans-serif;
+  letter-spacing: -1px;
+}
+
+.price span {
+  font: 500 11px "DM Sans", sans-serif;
+  color: var(--muted);
+}
+
+.plan-card ul {
+  display: grid;
+  gap: 10px;
+  margin: 18px 0 22px;
+  padding: 0;
+  list-style: none;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.plan-card li::before {
+  margin-right: 10px;
+  color: #628a1e;
+  font-weight: 800;
+  content: "✓";
+}
+
+.choose-plan {
+  margin-top: auto;
+}
+
+.tools-section {
+  padding-block: 94px 64px;
+}
+
+.bmi-panel {
+  display: grid;
+  grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+  gap: 20px;
+  margin-top: 28px;
+  padding: 20px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.bmi-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  align-items: end;
+}
+
+.bmi-form label {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.bmi-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #f9faf8;
+  color: var(--ink);
+}
+
+.bmi-form button {
+  width: auto;
+}
+
+.bmi-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #eef1ec;
+}
+
+.bmi-result-copy {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.result-symbol {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: var(--green);
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.bmi-result-copy strong {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 17px;
+  letter-spacing: -0.4px;
+}
+
+.bmi-result-copy p {
+  margin: 0;
+  font-size: 12px;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.bmi-chart {
+  width: 100%;
+}
+
+.bmi-scale {
+  position: relative;
+  padding-top: 30px;
+}
+
+.bmi-marker {
+  position: absolute;
+  top: 0;
+  left: var(--bmi-position, 50%);
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  min-width: 38px;
+  height: 24px;
+  padding: 0 5px;
+  border-radius: 5px;
+  background: var(--ink);
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  line-height: 1;
+  transform: translateX(-50%);
+}
+
+.bmi-marker::after {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  width: 0;
+  height: 0;
+  transform: translateX(-50%);
+  border-top: 7px solid var(--ink);
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: "";
+}
+
+.bmi-range-bar {
+  display: grid;
+  height: 14px;
+  overflow: hidden;
+  grid-template-columns: 18.5fr 6.5fr 15fr;
+  border-radius: 999px;
+}
+
+.bmi-range-low {
+  background: #f1cf55;
+}
+
+.bmi-range-standard {
+  background: #72bf75;
+}
+
+.bmi-range-high {
+  background: #e97870;
+}
+
+.bmi-range-labels {
+  display: grid;
+  grid-template-columns: 18.5fr 6.5fr 15fr;
+  gap: 2px;
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.bmi-range-labels span:nth-child(2) {
+  text-align: center;
+}
+
+.bmi-range-labels span:last-child {
+  text-align: right;
+}
+
+.bmi-chart-note {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 9px;
+  text-align: right;
+}
+
+.bmi-recommendations {
+  width: 100%;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #eef1ec;
+}
+
+.bmi-recommendations h3 {
+  margin: 0 0 8px;
+  font: 700 17px Manrope, sans-serif;
+  letter-spacing: -0.4px;
+}
+
+.bmi-recommendation-goal {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.bmi-recommendations ul {
+  display: grid;
+  gap: 9px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bmi-recommendations li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.bmi-recommendations li::before {
+  position: absolute;
+  left: 0;
+  color: #628a1e;
+  font-weight: 800;
+  content: "✓";
+}
+
+.bmi-recommendation-note {
+  margin: 16px 0 0;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.bmi-general-tips {
+  margin-top: 20px;
+  padding: 26px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+.bmi-general-tips-heading .eyebrow {
+  margin-bottom: 8px;
+}
+
+.bmi-general-tips h3,
+.bmi-general-tips h4 {
+  color: var(--ink);
+  font-family: Manrope, sans-serif;
+  font-weight: 800;
+}
+
+.bmi-general-tips h3 {
+  margin: 0;
+  font-size: 20px;
+  letter-spacing: -0.5px;
+}
+
+.bmi-general-tips h4 {
+  margin: 0 0 12px;
+  font-size: 15px;
+}
+
+.bmi-tips-list,
+.bmi-meal-planning ul {
+  display: grid;
+  gap: 9px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.bmi-tips-list li,
+.bmi-meal-planning li {
+  position: relative;
+  padding-left: 22px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.bmi-tips-list li::before,
+.bmi-meal-planning li::before {
+  position: absolute;
+  left: 0;
+  color: #628a1e;
+  font-weight: 800;
+  content: "✓";
+}
+
+.bmi-meal-planning {
+  margin-top: 22px;
+  padding: 18px;
+  background: #eef1ec;
+  border-radius: 12px;
+}
+
+.bmi-meal-planning ul {
+  margin-top: 0;
+}
+
+.bmi-meal-planning li strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.bmi-general-note {
+  margin: 20px 0 0;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.7;
+}
+
+.review-card {
+  position: relative;
+  padding: 26px 28px 20px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.quote-mark {
+  font-size: 48px;
+  line-height: 1;
+  color: var(--green-dark);
+}
+
+.review-card blockquote {
+  margin: 0;
+  font: 700 28px/1.4 Manrope, sans-serif;
+  letter-spacing: -1px;
+}
+
+.review-person {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--green);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.review-person strong {
+  display: block;
+  margin-bottom: 3px;
+}
+
+.review-person p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.stars {
+  margin-left: auto;
+  color: #e7b93d;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+
+.review-controls {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.review-controls button {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #cdd6c5;
+  border-radius: 8px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 18px;
+  transition: border-color 0.2s, background 0.2s, color 0.2s;
+}
+
+.review-controls button:hover {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: var(--green);
+}
+
+.join-section {
+  padding: 56px 0;
+  background: linear-gradient(180deg, #eef3ec, #f7f8f6);
+}
+
+.join-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: 48px;
+  padding: 44px 48px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 94% 0%, rgba(201, 243, 107, 0.13), transparent 30%),
+    linear-gradient(120deg, #17201b, #26352a);
+  border: 1px solid rgba(201, 243, 107, 0.22);
+  border-radius: 18px;
+  box-shadow: 0 18px 42px rgba(23, 32, 27, 0.16);
+}
+
+.join-copy .eyebrow {
+  color: var(--green);
+}
+
+.join-copy h2 {
+  margin: 0;
+  font: 800 clamp(30px, 4vw, 42px) / 1.15 Manrope, sans-serif;
+  letter-spacing: -1.8px;
+  color: var(--white);
+}
+
+.join-copy h2 span {
+  color: var(--green);
+}
+
+.join-copy > p:last-child {
+  max-width: 480px;
+  margin: 12px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+}
+
+.join-action {
+  display: grid;
+  justify-items: stretch;
+  gap: 10px;
+  min-width: 230px;
+}
+
+.join-action small {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 11px;
+}
+
+.join-action .button-light {
+  min-width: 230px;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+  gap: 22px;
+}
+
+.contact-details,
+.contact-form {
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+
+.contact-details {
+  display: grid;
+  gap: 18px;
+  padding: 24px;
+}
+
+.contact-item {
+  display: grid;
+  grid-template-columns: 36px 1fr;
+  gap: 14px;
+  align-items: start;
+}
+
+.contact-item span {
+  display: grid;
+  place-items: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 10px;
+  background: #eef1ec;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.contact-item strong {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.contact-item p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.contact-form {
+  display: grid;
+  gap: 16px;
+  padding: 24px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #fafbf9;
+  color: var(--ink);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-message {
+  min-height: 18px;
+  margin: 0;
+  font-size: 12px;
+  color: var(--ink);
+}
+
+.footer {
+  background: white;
+  border-top: 1px solid var(--line);
+}
+
+.footer-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 110px;
+}
+
+.footer-main > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.footer-links {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 56px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.footer-bottom a {
+  font-weight: 700;
+}
+
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 16px;
+  overflow-y: auto;
+}
+
+.modal[hidden] {
+  display: none;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(17, 23, 19, 0.45);
+}
+
+.modal-card {
+  position: relative;
+  z-index: 1;
+  width: min(520px, calc(100% - 32px));
+  max-height: calc(100vh - 40px);
+  margin: auto;
+  overflow-y: auto;
+  padding: 30px 24px 24px;
+  background: white;
+  border-radius: 22px;
+  box-shadow: var(--shadow);
+}
+
+.registration-card {
+  width: min(620px, 100%);
+  padding: 36px;
+  border: 1px solid rgba(201, 243, 107, 0.35);
+}
+
+.registration-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-right: 36px;
+}
+
+.registration-heading .dash-icon {
+  flex: 0 0 auto;
+  width: 46px;
+  height: 46px;
+  background: var(--green);
+  font: 800 23px Manrope, sans-serif;
+}
+
+.registration-heading .eyebrow {
+  margin: 0 0 4px;
+}
+
+.registration-heading h2 {
+  margin: 0;
+  font: 800 27px / 1.2 Manrope, sans-serif;
+  letter-spacing: -1px;
+}
+
+.registration-card .modal-intro {
+  margin: 16px 0 24px;
+}
+
+.registration-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 16px;
+}
+
+.registration-form label {
+  display: grid;
+  align-content: start;
+  gap: 7px;
+  min-width: 0;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.registration-form input,
+.registration-form select {
+  width: 100%;
+  min-height: 46px;
+  padding: 11px 13px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fafbf9;
+  color: var(--ink);
+}
+
+.registration-form input:focus,
+.registration-form select:focus {
+  border-color: var(--green-dark);
+  outline: 2px solid rgba(154, 198, 59, 0.18);
+}
+
+.registration-form > button,
+.registration-form > .form-message {
+  grid-column: 1 / -1;
+}
+
+.registration-form > button {
+  margin-top: 2px;
+}
+
+.registration-form > .form-message {
+  margin-top: -10px;
+}
+
+.login-card {
+  width: min(460px, calc(100% - 32px));
+  padding: 36px;
+  border: 1px solid rgba(201, 243, 107, 0.3);
+}
+
+.login-heading {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-right: 28px;
+}
+
+.login-heading .dash-icon {
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  background: var(--green);
+  font: 800 22px Manrope, sans-serif;
+}
+
+.login-heading .eyebrow {
+  margin: 0 0 4px;
+}
+
+.login-heading h2 {
+  margin: 0;
+  font: 800 28px / 1.15 Manrope, sans-serif;
+  letter-spacing: -1px;
+}
+
+.login-card .modal-intro {
+  margin: 18px 0 22px;
+}
+
+.google-login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  min-height: 48px;
+  padding: 10px 16px;
+  border: 1px solid #dadce0;
+  border-radius: 9px;
+  background: #fff;
+  color: #3c4043;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s, box-shadow 0.2s;
+}
+
+.google-login:hover {
+  background: #f8faff;
+  box-shadow: 0 1px 3px rgba(60, 64, 67, 0.2);
+}
+
+.google-login svg {
+  width: 18px;
+  height: 18px;
+  flex: 0 0 auto;
+}
+
+.google-login-message {
+  margin-top: 8px;
+  text-align: center;
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 18px 0;
+  color: var(--muted);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  white-space: nowrap;
+}
+
+.login-divider::before,
+.login-divider::after {
+  height: 1px;
+  flex: 1;
+  background: var(--line);
+  content: "";
+}
+
+.login-form {
+  display: grid;
+  gap: 16px;
+}
+
+.login-form label,
+.member-review-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.login-form input,
+.member-review-form textarea,
+.member-review-form select {
+  width: 100%;
+  padding: 12px 13px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fafbf9;
+  color: var(--ink);
+}
+
+.login-form input:focus,
+.member-review-form textarea:focus,
+.member-review-form select:focus {
+  border-color: var(--green-dark);
+  outline: 2px solid rgba(154, 198, 59, 0.18);
+}
+
+.member-review-form {
+  display: grid;
+  gap: 18px;
+  margin-top: 24px;
+  padding: 26px;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(24, 34, 27, 0.05);
+}
+
+.member-review-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.member-review-heading .eyebrow {
+  margin: 0 0 6px;
+}
+
+.member-review-heading h3 {
+  margin: 0;
+  font: 800 21px / 1.3 Manrope, sans-serif;
+  letter-spacing: -0.6px;
+}
+
+.member-review-form textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.member-review-submit {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.member-review-submit label {
+  width: min(260px, 100%);
+}
+
+.member-review-form .form-message {
+  min-height: 0;
+}
+
+.modal-close {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  background: #f3f5f2;
+  color: var(--ink);
+  font-size: 18px;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.modal-close:hover {
+  border-color: var(--green-dark);
+  background: #eaf3dc;
+}
+
+.modal-intro {
+  margin: 0 0 18px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.dashboard {
+  padding-block: 64px;
+}
+
+.dashboard-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.dashboard-top p {
+  margin: 8px 0 0;
+  color: var(--muted);
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.dashboard-grid article {
+  padding: 26px 22px;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+}
+
+.dash-icon {
+  display: inline-grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: #eef1ec;
+  font-size: 17px;
+}
+
+.dashboard-grid p {
+  margin: 18px 0 8px;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.7px;
+  color: rgb(117, 128, 116);
+}
+
+.dashboard-grid h3 {
+  margin: 0;
+  font: 800 23px Manrope, sans-serif;
+  letter-spacing: -0.8px;
+}
+
+.dashboard-grid small {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.toast {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+  z-index: 60;
+  max-width: 320px;
+  padding: 12px 16px;
+  background: rgba(23, 32, 27, 0.96);
+  color: white;
+  border-radius: 12px;
+  font-size: 12px;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.2s ease;
+  pointer-events: none;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#programs,
+#membership,
+#trainers,
+#reviews,
+#contact,
+#bmiGeneralTips {
+  scroll-margin-top: 20px;
+}
+
+@media (max-width: 980px) {
+  .site-header {
+    height: 72px;
+    padding-inline: 24px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    display: none;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 0;
+    padding: 8px 24px 20px;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow);
+  }
+
+  .nav.open {
+    display: flex;
+  }
+
+  .nav > a {
+    padding: 10px 0;
+  }
+
+  .nav-login {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    padding-block: 50px 55px;
+  }
+
+  .hero h1 {
+    font-size: clamp(52px, 14vw, 70px);
+    letter-spacing: -3px;
+  }
+
+  .hero-text {
+    font-size: 14px;
+  }
+
+  .hero-stats {
+    gap: 0;
+    justify-content: space-between;
+    margin-top: 35px;
+  }
+
+  .hero-stats strong {
+    font-size: 19px;
+  }
+
+  .hero-stats span {
+    font-size: 10px;
+  }
+
+  .hero-visual,
+  .hero-visual > img {
+    min-height: 360px;
+    height: 360px;
+  }
+
+  .image-tag {
+    left: 12px;
+    bottom: 18px;
+  }
+
+  .vertical-note {
+    right: 10px;
+    top: 14px;
+    color: white;
+    text-shadow: rgb(51, 51, 51) 0 1px 4px;
+  }
+
+  .ticker {
+    gap: 13px;
+    padding: 15px 10px;
+    font-size: 9px;
+  }
+
+  .ticker span:nth-of-type(n + 3) {
+    display: none;
+  }
+
+  .section-heading {
+    align-items: start;
+    flex-direction: column;
+    gap: 14px;
+    margin-bottom: 25px;
+  }
+
+  .section-heading h2,
+  .coach-inner h2,
+  .join-copy h2 {
+    font-size: 34px;
+  }
+
+  .heading-side {
+    font-size: 12px;
+  }
+
+  .program-grid,
+  .trainer-grid,
+  .plans-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-card > img {
+    height: 235px;
+  }
+
+  .program-content {
+    padding: 22px;
+  }
+
+  .coach-band {
+    padding: 48px 0;
+  }
+
+  .coach-inner {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .coach-inner .button {
+    width: 100%;
+  }
+
+  .trainer-card > img {
+    height: 350px;
+  }
+
+  .membership-section .section {
+    padding-block: 65px;
+  }
+
+  .plan-card {
+    min-height: auto;
+    padding: 27px;
+  }
+
+  .popular {
+    right: 15px;
+    top: 15px;
+  }
+
+  .bmi-panel {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    padding: 19px;
+  }
+
+  .bmi-form {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+  }
+
+  .bmi-form button {
+    width: 100%;
+    grid-column: 1 / -1;
+  }
+
+  .bmi-result {
+    padding: 18px;
+  }
+
+  .review-card {
+    padding: 25px 22px;
+  }
+
+  .review-card blockquote {
+    font-size: 20px;
+  }
+
+  .join-section {
+    padding: 45px 0;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .contact-form {
+    padding: 20px;
+  }
+
+  .footer-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .footer-main > p {
+    margin: 0;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .modal-card {
+    padding: 27px 22px;
+  }
+
+  .registration-card {
+    padding: 30px 22px 24px;
+  }
+
+  .login-card {
+    padding: 30px 22px 24px;
+  }
+
+  .member-review-form {
+    padding: 20px;
+  }
+
+  .member-review-submit {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .member-review-submit label {
+    width: 100%;
+  }
+
+  .dashboard-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard {
+    padding-block: 55px;
+  }
+
+  .review-controls {
+    margin-top: -5px;
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 500px) {
+  .registration-form {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .join-card {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 28px 22px;
+  }
+
+  .join-action,
+  .join-action .button-light {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .bmi-result {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 18px;
+  }
+
+  .bmi-result-copy {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+  }
+
+  .bmi-chart[hidden] {
+    display: none;
+  }
+
+  .bmi-chart {
+    width: 100%;
+  }
+
+  .bmi-scale {
+    position: relative;
+    padding-top: 30px;
+  }
+
+  .bmi-marker {
+    position: absolute;
+    top: 0;
+    left: var(--bmi-position, 50%);
+    z-index: 1;
+    display: grid;
+    min-width: 38px;
+    height: 24px;
+    padding: 0 5px;
+    place-items: center;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    background: var(--ink);
+    color: white;
+    font-size: 10px;
+    font-weight: 800;
+    line-height: 1;
+  }
+
+  .bmi-marker::after {
+    position: absolute;
+    bottom: -6px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    transform: translateX(-50%);
+    border-top: 7px solid var(--ink);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: "";
+  }
+
+  .bmi-range-bar {
+    display: grid;
+    height: 14px;
+    overflow: hidden;
+    grid-template-columns: 18.5fr 6.5fr 15fr;
+    border-radius: 999px;
+  }
+
+  .bmi-range-low {
+    background: #f1cf55;
+  }
+
+  .bmi-range-standard {
+    background: #72bf75;
+  }
+
+  .bmi-range-high {
+    background: #e97870;
+  }
+
+  .bmi-range-labels {
+    display: grid;
+    grid-template-columns: 18.5fr 6.5fr 15fr;
+    gap: 2px;
+    margin-top: 7px;
+    color: var(--muted);
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  .bmi-range-labels span:nth-child(2) {
+    text-align: center;
+  }
+
+  .bmi-range-labels span:last-child {
+    text-align: right;
+  }
+
+  .bmi-chart-note {
+    margin: 7px 0 0;
+    color: var(--muted);
+    font-size: 9px;
+    text-align: right;
+  }
+
+  .bmi-recommendations {
+    padding: 18px;
+  }
+
+  .bmi-general-tips {
+    padding: 20px;
+  }
+
+  .bmi-meal-planning {
+    padding: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  ::before,
+  ::after {
+    transition: none !important;
+    animation: auto ease 0s 1 normal none running none !important;
+  }
+}
+
+#programs {
+  scroll-margin-top: -60px;
+}
+
+#membership {
+  scroll-margin-top: -10px;
+  padding-block: 0;
+}
+
+.membership-section .section {
+  padding-block: 24px;
+}
+
+.membership-section .plan-card {
+  min-height: 360px;
+  padding: 8px;
+}
+
+.membership-section .plan-desc {
+  margin-bottom: 12px;
+}
+
+.membership-section .price {
+  padding-bottom: 8px;
+}
+
+.membership-section .plan-card ul {
+  gap: 7px;
+  margin: 10px 0 12px;
+}
+
+#trainers {
+  scroll-margin-top: -60px;
+}
+
+#reviews {
+  scroll-margin-top: -35px;
+}
+
+#contact {
+  scroll-margin-top: -75px;
+}
+
+#bmiGeneralTips {
+  scroll-margin-top: 10px;
+}
